@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+  	<property name="hibernate.connection.datasource">java:comp/env/jdbc/travelmanager</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <mapping class="" file="" jar="" package="" resource="Account.hbm.xml"/>
+    <mapping class="" file="" jar="" package="" resource="Profile.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

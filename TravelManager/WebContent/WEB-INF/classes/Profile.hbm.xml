@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2014 2:33:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="domain.Profile" table="profile" catalog="travel_manager" optimistic-lock="version">
+        <id name="accountId" type="java.lang.Integer">
+            <column name="accountID" />
+            <generator class="foreign">
+                <param name="property">account</param>
+            </generator>
+        </id>
+        <one-to-one name="account" class="domain.Account" constrained="true"></one-to-one>
+        <property name="firstName" type="string">
+            <column name="firstName" length="45" not-null="true" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="middleName" length="45" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="45" not-null="true" />
+        </property>
+        <property name="primaryAddress" type="string">
+            <column name="primaryAddress" length="45" not-null="true" />
+        </property>
+        <property name="primaryCity" type="string">
+            <column name="primaryCity" length="45" not-null="true" />
+        </property>
+        <property name="primaryState" type="string">
+            <column name="primaryState" length="45" not-null="true" />
+        </property>
+        <property name="primaryZip" type="string">
+            <column name="primaryZip" length="45" not-null="true" />
+        </property>
+        <property name="primaryEmail" type="string">
+            <column name="primaryEmail" length="45" not-null="true" />
+        </property>
+        <property name="primaryPhone" type="string">
+            <column name="primaryPhone" length="45" not-null="true" />
+        </property>
+        <property name="gender" type="char">
+            <column name="gender" length="1" not-null="true" />
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="dateOfBirth" length="10" not-null="true" />
+        </property>
+        <property name="passportNum" type="string">
+            <column name="passportNum" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

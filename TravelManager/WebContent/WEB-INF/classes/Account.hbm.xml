@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 16, 2014 2:33:36 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="domain.Account" table="account" catalog="travel_manager" optimistic-lock="version">
+        <id name="accountId" type="java.lang.Integer">
+            <column name="accountID" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="userName" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="userRole" type="string">
+            <column name="userRole" length="45" not-null="true" />
+        </property>
+        <one-to-one name="profile" class="domain.Profile"></one-to-one>
+    </class>
+</hibernate-mapping>
